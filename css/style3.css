@@ -1,0 +1,46 @@
+#box_1 {
+    height:70px;
+}
+
+#service_name {
+    background-color: gray;
+    height: 60px;
+    width: 150px;
+    float: left;
+}
+
+#login_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#menu_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#textbox1 {
+    background-color: gray;
+    height: 200px;
+    width: 600px;
+    border-radius: 10px;
+    clear: both;
+}
+
+#textbox2 {
+    background-color: gray;
+    height: 200px;
+    width: 600px;
+    border-radius: 10px;
+}
+
+#textbox3 {
+    background-color: gray;
+    height: 200px;
+    width: 600px;
+    border-radius: 10px;
+}

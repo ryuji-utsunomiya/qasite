@@ -1,0 +1,156 @@
+#service_name {
+    background-color: gray;
+    height: 60px;
+    width: 150px;
+    float: left;
+}
+
+#login_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#menu_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#box_2 {
+    position: relative;
+    clear: both;
+    width: 100%;
+    height: 200px;
+    background-color: antiquewhite;
+}
+
+#top_msg {
+    position: absolute;
+    top: -10px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 20px;
+    width: 300px;
+    text-align: center;
+}
+
+#register_btn {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 25px;
+    width: 100px;
+    text-align: center;
+}
+
+#box_3 {
+    position: relative;
+    width: 100%;
+    height: 100px;
+    background-color: gray;
+}
+
+#ask_btn {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 40%;
+    bottom: 0;
+    margin: auto;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+}
+
+#ans_btn {
+    position: absolute;
+    top: 0;
+    left: 40%;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+    height: 50px;
+    width: 250px;
+    text-align: center;
+}
+
+#box_4 {
+    margin-top: 15px;
+    position: relative;
+    width: 100%;
+    height: 200px;
+    background-color: gray;
+}
+
+#recent_question {
+    position: absolute;
+    background-color: antiquewhite;
+    height: 180px;
+    width: 55%;
+    top: 0;
+    left: 0;
+    right: 40%;
+    bottom: 0;
+}
+
+#ranking {
+    position: absolute;
+    background-color: antiquewhite;
+    height: 180px;
+    width: 35%;
+    top: 0;
+    left: 60%;
+    right: 0;
+    bottom: 0;
+}
+
+#box_5 {
+    position: relative;
+    margin-top: 15px;
+    width: 400px;
+    height: 30px;
+    left: 25%;
+    right: auto;
+    background-color: gray;
+}
+
+#bottom_link {
+    position: absolute;
+    height: 20px;
+    width: 400px;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
