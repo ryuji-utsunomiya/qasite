@@ -1,3 +1,7 @@
+<?php
+session_start();
+
+?>
 IDもパスもtest
 <!DOCTYPE html>
 <html>
@@ -14,8 +18,8 @@ IDもパスもtest
 
 <!-- lLOGINogin_act.php は認証処理用のPHPです。 -->
 <form name="form1" action="login_act.php" method="post">
-ID:<input type="text" name="lid" />
-PW:<input type="password" name="lpw" />
+ID:<input type="text" name="email" />
+PW:<input type="text" name="pass" />
 <input type="submit" value="LOGIN" />
 </form>
     <a href="register.php">新規登録</a>

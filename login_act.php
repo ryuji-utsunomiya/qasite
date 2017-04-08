@@ -7,8 +7,8 @@ include("functions.php");
 //フォームに入力がなかったらlogin.phpを再表示
 //issetに！をつけて「setされていない場合」
 if(
-    !isset($_POST["lid"]) || $_POST["lid"]=="" ||
-    !isset($_POST["lpw"]) || $_POST["lpw"]==""
+    !isset($_POST["email"]) || $_POST["email"]=="" ||
+    !isset($_POST["pass"]) || $_POST["pass"]==""
 ){
     header("Location:login.php");
     exit();
@@ -19,10 +19,10 @@ if(
 $pdo = db_con();
 
 //2. データ登録SQL作成
-$sql = "SELECT * FROM qa_user_table WHERE lid=:lid AND lpw=:lpw AND life_flg=0";
+$sql = "SELECT * FROM user_table WHERE email=:email AND pass=:pass AND life_flg=0";
 $stmt = $pdo->prepare($sql);
-$stmt->bindValue(':lid', $_POST["lid"]);
-$stmt->bindValue(':lpw', $_POST["lpw"]);
+$stmt->bindValue(':email', $_POST["email"]);
+$stmt->bindValue(':pass', $_POST["pass"]);
 $res = $stmt->execute();
 
 //3. SQL実行時にエラーがある場合
@@ -38,9 +38,9 @@ $val = $stmt->fetch(); //1レコードだけ取得する方法
 //5. 該当レコードがあればSESSIONに値を代入
 if( $val["id"] != "" ){
   $_SESSION["chk_ssid"]  = session_id();
-  $_SESSION["kanri_flg"] = $val['kanri_flg'];
+  $_SESSION["admin"] = $val['admin'];
   $_SESSION["name"]      = $val['name'];
-  header("Location:top.php");
+  header("Location:mypage.php");
 }else{
   //logout処理を経由して全画面へ
   header("Location:login.php");
