@@ -15,7 +15,7 @@
         <div id="service_name" >【サービス名】</div>
         <button id="menu_btn">MENU</button>
         <button id="login_btn">
-            <a href="login.html">ログイン</a>
+            <a href="login.php">ログイン</a>
         </button>
     </div>
     <div id="box_2">

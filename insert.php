@@ -73,7 +73,7 @@ if($status==false){
     
     
     
-  header("Location: mypage.php");
+  header("Location: top.php");
   exit;
 
 }

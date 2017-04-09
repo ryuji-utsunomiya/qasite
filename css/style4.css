@@ -1,0 +1,33 @@
+#box_1 {
+    height:70px;
+}
+
+#service_name {
+    background-color: gray;
+    height: 60px;
+    width: 150px;
+    float: left;
+}
+
+#login_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#menu_btn {
+    background-color: gray;
+    height: 60px;
+    width: 60px;
+    float: right;
+}
+
+#title {
+     width: 500px;
+}
+
+#content {
+    width: 500px;
+    height: 300px;
+}

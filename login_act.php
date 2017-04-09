@@ -38,11 +38,12 @@ $val = $stmt->fetch(); //1レコードだけ取得する方法
 //5. 該当レコードがあればSESSIONに値を代入
 if( $val["id"] != "" ){
   $_SESSION["chk_ssid"]  = session_id();
+  $_SESSION["id"]  = $val['id'];
   $_SESSION["admin"] = $val['admin'];
-  $_SESSION["name"]      = $val['name'];
+  $_SESSION["f_name"]      = $val['f_name'];
   header("Location:mypage.php");
 }else{
-  //logout処理を経由して全画面へ
+  //logout処理を経由して前画面へ
   header("Location:login.php");
 }
 

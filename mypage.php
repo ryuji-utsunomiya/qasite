@@ -2,7 +2,7 @@
 <?php
     session_start();
 
-$id = 6; //$_POST["id"];//ここがID引き継げていない
+$id = $_POST["id"]; //$_POST["id"];//ここがID引き継げていない
 
 //1.  DB接続します
 try {

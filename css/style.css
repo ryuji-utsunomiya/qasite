@@ -93,6 +93,7 @@
 #recent_question {
     position: absolute;
     background-color: antiquewhite;
+    overflow: scroll;
     height: 180px;
     width: 55%;
     top: 0;
@@ -133,8 +134,10 @@
     text-align: center;
 }
 
-
-
+#title {
+    height: 20px;
+    width: 100%;
+}
 
 
 
