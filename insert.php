@@ -5,6 +5,7 @@ $l_name   = $_POST["l_name"];
 $f_name   = $_POST["f_name"];
 $l_kana   = $_POST["l_kana"];
 $f_kana   = $_POST["f_kana"];
+$user_name   = $_POST["user_name"];
 $email   = $_POST["email"];
 $email_check   = $_POST["email_check"];
 $b_year   = $_POST["b_year"];
@@ -23,12 +24,13 @@ try {
 }
 
 //３．データ登録SQL作成
-$stmt = $pdo->prepare("INSERT INTO user_table(id, l_name, f_name, l_kana, f_kana, email, email_check, b_year, b_month, b_day, sex, pass, pass_check)VALUES(:id, :l_name, :f_name, :l_kana, :f_kana, :email, :email_check, :b_year, :b_month, :b_day, :sex, :pass, :pass_check )");
+$stmt = $pdo->prepare("INSERT INTO user_table(id, l_name, f_name, l_kana, f_kana, user_name, email, email_check, b_year, b_month, b_day, sex, pass, pass_check)VALUES(:id, :l_name, :f_name, :l_kana, :f_kana, :user_name, :email, :email_check, :b_year, :b_month, :b_day, :sex, :pass, :pass_check )");
 $stmt->bindValue(':id', $id, PDO::PARAM_INT);  //Integer（数値の場合 PDO::PARAM_INT)
 $stmt->bindValue(':l_name', $l_name, PDO::PARAM_STR);
 $stmt->bindValue(':f_name', $f_name, PDO::PARAM_STR);
 $stmt->bindValue(':l_kana', $l_kana, PDO::PARAM_STR);
 $stmt->bindValue(':f_kana', $f_kana, PDO::PARAM_STR);
+$stmt->bindValue(':user_name', $user_name, PDO::PARAM_STR);
 $stmt->bindValue(':email', $email, PDO::PARAM_STR);
 $stmt->bindValue(':email_check', $email_check, PDO::PARAM_STR);
 $stmt->bindValue(':b_year', $b_year, PDO::PARAM_INT);
@@ -51,29 +53,41 @@ if($status==false){
   //５．index.phpへリダイレクト.半角スペースが入る。header使ったらexitを使うのが風習。
     
     
-    
-    //画像アップロード
-    if(isset($_FILES['filename']) && $_FILES['filename']['error']==0){
-    
-    //2. アップロード先とファイル名を作成
-    $upload_file = "./upload/".$_FILES["filename"]["name"];
-    
-    // アップロードしたファイルを指定のパスへ移動
-    //move_uploaded_file("一時保存場所","成功後に正しい場所に移動");
-    if (move_uploaded_file($_FILES["filename"]['tmp_name'],$upload_file)){
-        
-        //パーミッションを変更（ファイルの読み込み権限を付けてあげる）
-        chmod($upload_file,0644);
-    }else{
-        echo "fileuploadOK...Failed";
-    }
-}else{
-    echo "fileupload失敗";
+
+    // 画像アップロードと移動
+if (is_uploaded_file($_FILES["upfile"]["tmp_name"])) {
+  if (move_uploaded_file($_FILES["upfile"]["tmp_name"], "files/" . $_FILES["upfile"]["name"])) {
+    chmod("files/" . $_FILES["upfile"]["name"], 0644);
+    echo $_FILES["upfile"]["name"] . "をアップロードしました。";
+  } else {
+    echo "ファイルをアップロードできません。";
+  }
+} else {
+  echo "ファイルが選択されていません。";
 }
     
+//    //画像アップロード
+//    if(isset($_FILES['upfile']) && $_FILES['upfile']['error']==0){
+//    
+//    //2. アップロード先とファイル名を作成
+//    $upload_file = "./upload/".$_FILES["upfile"]["name"];
+//    
+//    // アップロードしたファイルを指定のパスへ移動
+//    //move_uploaded_file("一時保存場所","成功後に正しい場所に移動");
+//    if (move_uploaded_file($_FILES["upfile"]['tmp_name'],$upload_file)){
+//        
+//        //パーミッションを変更（ファイルの読み込み権限を付けてあげる）
+//        chmod($upload_file,0644);
+//    }else{
+//        echo "fileuploadOK...Failed";
+//    }
+//}else{
+//    echo "fileupload失敗";
+//}
+//    
     
     
-  header("Location: top.php");
+  header("Location: register_done.php");
   exit;
 
 }

@@ -1,0 +1,86 @@
+#nav {
+	width: 544px;
+	height: 40px;
+	margin: 0 auto;
+}
+#nav li {
+	position: relative;
+	float: left;
+	width: 108px;
+	height: 40px;
+	text-align: center;
+	border-right: 1px solid #fff;
+}
+#nav li:last-child {
+	border-right: none;
+}
+#nav li a {
+	display: block;
+	width: 108px;
+	height: 40px;
+	color: #fff;
+	font-size: 14px;
+	line-height: 2.8;
+	background: #9fb7d4;
+}
+#nav li a:hover {
+	color: #fff;
+	background: #afc6e2;
+}
+#nav > li li:hover > a {
+	background: #afc6e2;
+}
+#nav li ul {
+	left: 0;
+	position: absolute;
+}
+#nav li ul li {
+	overflow: hidden;
+	height: 0;
+}
+#nav li ul li a {
+	border-top: 1px solid #fff;
+}
+#nav li:hover > ul > li {
+	overflow: visible;
+	width: 108px;
+	height: 40px;
+}
+	#nav li ul li ul {/*孫*/
+		top: 0;
+		left: 109px;
+	}
+	#nav li ul li ul:before {/*孫*/
+		position: absolute;
+		content: "";
+		top: 15px;
+		left: -10px;
+		border: 5px solid transparent;
+		border-left: 5px solid #fff;
+	}
+	#nav li ul li ul li:hover > a {/*孫*/
+		background: #afc6e2;
+	}
+	#nav li ul li ul.left {/*孫*/
+		top: 0;
+		left: -109px;
+		width: 108px;
+	}
+	#nav li ul li ul.left:before {/*孫*/
+		position: absolute;
+		content: "";
+		top: 15px;
+		left: 110px;
+		border: 5px solid transparent;
+		border-right: 5px solid #fff;
+	}
+	#nav li ul li ul.left li:hover > a {/*孫*/
+		background: #afc6e2;
+	}
+.content {
+	width: 524px;
+	height: 200px;
+	background: #eee;
+	margin: 0 auto;
+	padding: 10px;
+}

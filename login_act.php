@@ -39,9 +39,11 @@ $val = $stmt->fetch(); //1レコードだけ取得する方法
 if( $val["id"] != "" ){
   $_SESSION["chk_ssid"]  = session_id();
   $_SESSION["id"]  = $val['id'];
+    $_SESSION["email"]  = $val['email'];
   $_SESSION["admin"] = $val['admin'];
-  $_SESSION["f_name"]      = $val['f_name'];
-  header("Location:mypage.php");
+  $_SESSION["f_name"] = $val['f_name'];
+      $_SESSION["user_name"] = $val['user_name'];
+    header("Location:top.php");
 }else{
   //logout処理を経由して前画面へ
   header("Location:login.php");

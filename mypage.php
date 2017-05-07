@@ -2,7 +2,7 @@
 <?php
     session_start();
 
-$id = $_POST["id"]; //$_POST["id"];//ここがID引き継げていない
+$id = $_SESSION["id"];
 
 //1.  DB接続します
 try {
@@ -31,43 +31,78 @@ if($status==false){
 <!DOCTYPE html>
 <html lang="ja">
 <head>
+   
     <meta charset="UTF-8">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style7.css">
     <title>マイページ</title>
 </head>
 <body>
     <div id="box_1">
-        <div id="service_name" >【サービス名】</div>
-        <button id="menu_btn">MENU</button>
-        <button id="login_btn">
-            <a href="login.html">ログイン</a>
-        </button>
-    </div>
-    <div id="box_2">
+       <form action="top.php">
+        <button id="service_name" >Brain Search</button>
+        </form>
+                <button id="menu_btn">よくある質問</button>
+        <a href="#what"><button id="menu_btn">BRAIN SEARCHとは？</button></a>
 
-<form method="post" action="insert.php" enctype="multipart/form-data">
-    <div>
-    <legend></legend>
-     <label>氏名：
-         姓<input type="text" name="l_name" value="<?=$res["l_name"]?>">
-         名<input type="text" name="f_name" value="<?=$res["f_name"]?>">
-     </label><br>
-     <label>氏名（フリガナ）：
-         姓<input type="text" name="l_kana" value="<?=$res["l_kana"]?>">
-         名<input type="text" name="f_kana" value="<?=$res["f_kana"]?>">
-     </label><br>
-     <label>メールアドレス：<input type="text" name="email" value="<?=$res["email"]?>"></label><br>
-     <label>メールアドレス（確認）：<input type="text" name="email_check" value="<?=$res["email_check"]?>"></label><br>
-     <label>生年月日：<input type="text" name="" value="<?=$res["b_year"]?>年<?=$res["b_month"]?>月<?=$res["b_day"]?>日">
-     </label><br>
-     <label>性別：
-         <input type="text" name="" value="<?=$res["sex"]?>">
+        <form  action="login.php">
+            <button id="login_btn" action="login.php">ログイン（ログイン中はマイページの表記に）</button>
+        </form>
+    </div>
+
+           <div id="box_2">
+        <table id="table_1">
+             <tr>
+                 <td id="td1">姓</td>
+                 <td><p><?=$res["l_name"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">名</td>
+                 <td><p><?=$res["f_name"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">姓（フリガナ）</td>
+                 <td><p><?=$res["l_kana"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">名（フリガナ）</td>
+                 <td><p><?=$res["f_kana"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">ユーザーネーム</td>
+                 <td><p><?=$res["user_name"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">メールアドレス</td>
+                 <td><p><?=$res["email"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">メールアドレス（確認）</td>
+                 <td><p><?=$res["email_check"]?></p></td>
+             </tr>
+             <tr>
+                 <td id="td1">生年月日</td>
+                 <td><p><?=$res["b_year"]?>年<?=$res["b_month"]?>月<?=$res["b_day"]?>日</p></td>
+             </tr>
+             <tr>
+                 <td id="td1">性別</td>
+                 <td>
+                     <p><?=$res["sex"]?>
+                 </td>
+             </tr>
+             <tr>
+                 <td></td>
+                 <td></td>
+             </tr>
+
+             
+         </table>
         
-     </label><br>
-     <label><input type="hidden" name="id" value="<?=$id?>"></label><br>
-     <input type="submit" value="送信">
-  </div>
-</form>
+     <input type="hidden" name="id" value="<?=$id?>">
+             <form  action="mypage_update.php">
+     <button id="submit_btn" >登録内容の更新</button>
+             </form>
+      </div>
+
 
     
 </body>

@@ -1,33 +1,125 @@
-#box_1 {
-    height:70px;
+body {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 3px;
 }
 
 #service_name {
-    background-color: gray;
-    height: 60px;
-    width: 150px;
+    background-color: lightgray;
+    height: 80px;
+    width: 250px;
     float: left;
+    font-size: 30px;
 }
 
 #login_btn {
-    background-color: gray;
-    height: 60px;
-    width: 60px;
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
     float: right;
 }
 
 #menu_btn {
-    background-color: gray;
-    height: 60px;
-    width: 60px;
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
     float: right;
 }
 
 #title {
-     width: 500px;
+     width: 550px;
+     height: 20px;
 }
 
 #content {
-    width: 500px;
+    width: 900px;
     height: 300px;
+    line-height: 10px;
+    
 }
+
+#box_2{
+    position: relative;
+    clear: both;
+    width:800px;
+    left: 100px;
+    right: 100px;
+    height:650px;
+    background-color: lightgray;
+    padding: 20px;
+}
+
+#box_3 {
+    width: 800px;
+    height: 300px;
+    position: relative;
+    text-align: center;
+}
+
+#submit_btn {
+    position: absolute;
+    width: 100px;
+    padding: 8px 18px;
+    background-color: gray;
+    border-radius: 8px;
+    left: 0;
+    right: 0;
+    margin: auto;
+    font-size: 15px;
+    
+
+}
+
+td {
+    padding: 15px;
+            border-style: solid;
+    border-collapse: collapse;
+    border:1px solid #333;
+    border-color: gray;
+    background-color: white;
+}
+
+#td1 {
+    width: 200px;
+    background-color: whitesmoke;
+}
+
+table {
+    font-size: 14px;
+    border-style: solid;
+    border-collapse: collapse;
+    border:1px solid #333;
+    border-color: gray;
+}
+
+#conf_msg {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    width: 470px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+#coin {
+    font-size: 18px;
+}
+
+#reward_pay {
+    font-size: 18px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+

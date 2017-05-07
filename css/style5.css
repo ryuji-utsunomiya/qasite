@@ -1,0 +1,84 @@
+body {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+#service_name {
+    background-color: lightgray;
+    height: 80px;
+    width: 250px;
+    float: left;
+    font-size: 30px;
+}
+
+#login_btn {
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
+    float: right;
+}
+
+#menu_btn {
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
+    float: right;
+}
+
+#box2 {
+    clear: both;
+    padding-top: 30px;
+    width: 900px;
+    position: relative;
+    margin: auto;
+}
+
+#q_title {
+    font-size: 20px;
+    width: 600px;
+    overflow: hidden;
+    height: 25px;
+}
+
+#profile_img {
+    height: 100px;
+    float: left;
+    margin-bottom: 15px
+}
+
+#name_q {
+    
+}
+
+#q_date {
+    
+}
+
+#q_content {
+    clear: both;
+    height: 300px;
+    border-radius: 15px;
+    background-color: lightgray;
+    margin: 15px;
+    padding: 10px;
+}
+
+
+#ans_box {
+    width: 600px;
+    height: 200px;
+    background-color: lightgray;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 10px;
+}
+
+#comment_box {
+    width: 500px;
+    height: 200px;
+    background-color: gray;
+    border-radius: 15px;
+    margin: 15px;
+    padding: 10px;
+}

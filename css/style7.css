@@ -1,0 +1,79 @@
+body {
+    width: 1024px;
+    margin: 0 auto;
+    margin-top: 3px;
+}
+
+#service_name {
+    background-color: lightgray;
+    height: 80px;
+    width: 250px;
+    float: left;
+    font-size: 30px;
+}
+
+#login_btn {
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
+    float: right;
+}
+
+#menu_btn {
+    background-color: lightgray;
+    height: 80px;
+    width: 80px;
+    float: right;
+}
+
+#box_2 {
+    position: relative;
+    padding-top: 30px;
+    clear: both;
+    width: 100%;
+    height: 700px;
+    background-color: lightgrey;
+}
+
+#table_1 {
+    position: absolute;
+    margin: auto;
+    left: 0;
+    right: 0;
+    width: 600px;
+    font-size: 14px;
+    border-style: solid;
+    border-collapse: collapse;
+    border:1px solid #333;
+}
+
+#td1 {
+    width: 200px;
+    background-color: whitesmoke;
+}
+
+td {
+    padding: 10px;
+    border-style: solid;
+    border-collapse: collapse;
+    border:1px solid #333;
+    border-color: gray;
+    background-color: white;
+    
+}
+
+#submit_btn {
+    position: absolute;
+    margin: auto;
+    width: 100px;
+    height: 30px;
+    left: 0;
+    right: 0;
+    bottom: 10px;
+    clear: both;
+    background-color: lightgray;
+    }
+
+
+
+

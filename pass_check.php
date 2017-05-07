@@ -6,10 +6,12 @@
 </head>
 <body>
     <p>アカウント作成時に登録したメールアドレスをご入力ください。</p>
-    <input type="text">
-    <button>送信</button>
-    <a href="top.html">トップへ</a>
-    
-    
+    <form action="email_done.php">
+        <input type="text">
+        <input type="submit" value="送信">
+    </form>
+    <form action="top.php">
+    <input type="submit" value="トップページへ">
+    </form>
 </body>
 </html>
